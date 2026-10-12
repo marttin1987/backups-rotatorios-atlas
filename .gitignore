@@ -1,0 +1,30 @@
+# Excluir copias de seguridad y firmas de hash
+backups/*.tar.gz
+backups/*.sha256
+backups/*.tmp
+
+# Excluir archivos de registros
+logs/*.log
+
+# Archivos temporales de editores de codigo
+*.swp
+
+cat << 'EOF' > .gitignore
+# Excluir copias de seguridad y firmas de hash
+
+backups/*.tar.gz
+backups/*.sha256
+backups/*.tmp
+
+# Excluir archivos de registros
+
+logs/*.log
+
+# Archivos temporales de editores de codigo
+
+*.swp
+
+
+*tmp
+*~
+.DS_Store

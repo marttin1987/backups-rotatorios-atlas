@@ -38,3 +38,19 @@ No se encontraron respaldos que superen los 7 dias.
 =================================================
 Respaldo completado con exito (Codigo: 0).
 
+====================================
+ 	INICIANDO RESPALDO ATLAS - 2026-10-12 20:13:13
+====================================
+[1] Comprimiendo '/home/mcoria/proyecto_atlas' -> '/home/mcoria/backups-rotatorios-atlas/backups/backup_atlas_2026-10-12_20-13-13.tar.gz'...
+====================================
+ 	INICIANDO RESPALDO ATLAS - 2026-10-12 20:19:42
+====================================
+[1] Comprimiendo '/home/mcoria/proyecto_atlas' -> '/home/mcoria/backups-rotatorios-atlas/backups/backup_atlas_2026-10-12_20-19-42.tar.gz'...
+Comprension finalizada correctamente.
+[2] Generando firma SHA-256...
+HASH: a69139f12bafaca06cee50eae6dea68f805797270feaf79827699f558ab60462
+[3] Aplicando politica de rotacion (7 dias)...
+No se encontraron respaldos que superen los 7 dias.
+=================================================
+Respaldo completado con exito (Codigo: 0).
+

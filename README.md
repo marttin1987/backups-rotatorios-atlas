@@ -3,11 +3,12 @@
 Sistema de almacenamiento, compresión, verificación de integridad e higiene de copias de seguridad automatizadas en servidores Linux.
 
 ## 📋 Características
-- **Compresión Ligera**: Generación automatizada de archivos `.tar.gz` respaldando directorios críticos.
-- **Validación de Integridad**: Creación y auditoría de firma criptográfica SHA-256 (`sha256sum`) para evitar archivos corruptos.
-- **Higiene de Disco (Rotación Lógica)**: Purga automatizada con `find -mtime` eliminando copias que superen la ventana de retención (ej. 7 días).
-- **Control Previo de Capacidad**: Verificación de espacio en disco previo al procesamiento para mitigar fallos por espacio insuficiente.
-- **Parametrización**: Variables centralizadas en `config/backup.conf`.
+- **Comprension Atomica**: Generacion de paquetes `.tar.gz` previa prueba en archivo `.tmp` para evitar dejar respaldos corruptos en el sistema
+- **Validacion de Integridad Portatil**: Firma criptografica SHA-256 con rutas relativas para preservar la privacidad de usuario locales.
+- **Auditoria de firma**: Script `src/verificar.sh` para comprobar la validez de los backups en cualquier momento.
+- **Higiene Especifica de Disco**: Purga de archivos antiguos filtrada unicamente por el prefijo `backup_atlas_*` para no borrar datos externos del usuario.
+- **Verificacion de Parametros**: Deteccion temprana de faltantes en `config/backup.conf` y control de umbral critico de almacenamiento.
+
 
 ## 🛠️ Requisitos e Instalación
 
