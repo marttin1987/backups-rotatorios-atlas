@@ -1,0 +1,40 @@
+====================================
+ 	INICIANDO RESPALDO ATLAS - 2026-10-12 17:00:30
+====================================
+====================================
+ 	INICIANDO RESPALDO ATLAS - 2026-10-12 17:03:16
+====================================
+====================================
+ 	INICIANDO RESPALDO ATLAS - 2026-10-12 17:04:02
+====================================
+[1] Comprimiendo '/home/mcoria/proyecto_atlas' -> '/home/mcoria/backups-rotatorios-atlas/backups/backup_atlas_2026-10-12_17-04-02.tar.gz'...
+Comprension finalizada correctamente.
+[2] Generando firma SHA-256...
+HASH: a69139f12bafaca06cee50eae6dea68f805797270feaf79827699f558ab60462
+[3] Aplicando politica de rotacion (7 dias)...
+No se encontraron respaldos que superen los 7 dias.
+=================================================
+====================================
+ 	INICIANDO RESPALDO ATLAS - 2026-10-12 17:05:40
+====================================
+[1] Comprimiendo '/home/mcoria/proyecto_atlas' -> '/home/mcoria/backups-rotatorios-atlas/backups/backup_atlas_2026-10-12_17-05-40.tar.gz'...
+Comprension finalizada correctamente.
+[2] Generando firma SHA-256...
+HASH: a69139f12bafaca06cee50eae6dea68f805797270feaf79827699f558ab60462
+[3] Aplicando politica de rotacion (7 dias)...
+No se encontraron respaldos que superen los 7 dias.
+=================================================
+Respaldo completado con exito (Codigo: 0).
+
+====================================
+ 	INICIANDO RESPALDO ATLAS - 2026-10-12 17:22:50
+====================================
+[1] Comprimiendo '/home/mcoria/proyecto_atlas' -> '/home/mcoria/backups-rotatorios-atlas/backups/backup_atlas_2026-10-12_17-22-50.tar.gz'...
+Comprension finalizada correctamente.
+[2] Generando firma SHA-256...
+HASH: a69139f12bafaca06cee50eae6dea68f805797270feaf79827699f558ab60462
+[3] Aplicando politica de rotacion (7 dias)...
+No se encontraron respaldos que superen los 7 dias.
+=================================================
+Respaldo completado con exito (Codigo: 0).
+

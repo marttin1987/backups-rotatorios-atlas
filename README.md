@@ -1,0 +1,17 @@
+# 💾 Backups Rotatorios ATLAS
+
+Sistema de almacenamiento, compresión, verificación de integridad e higiene de copias de seguridad automatizadas en servidores Linux.
+
+## 📋 Características
+- **Compresión Ligera**: Generación automatizada de archivos `.tar.gz` respaldando directorios críticos.
+- **Validación de Integridad**: Creación y auditoría de firma criptográfica SHA-256 (`sha256sum`) para evitar archivos corruptos.
+- **Higiene de Disco (Rotación Lógica)**: Purga automatizada con `find -mtime` eliminando copias que superen la ventana de retención (ej. 7 días).
+- **Control Previo de Capacidad**: Verificación de espacio en disco previo al procesamiento para mitigar fallos por espacio insuficiente.
+- **Parametrización**: Variables centralizadas en `config/backup.conf`.
+
+## 🛠️ Requisitos e Instalación
+
+1. Clonar el repositorio:
+```bash
+git clone git@github.com:marttin1987/backups-rotatorios-atlas.git
+cd backups-rotatorios-atlas
