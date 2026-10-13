@@ -18,7 +18,7 @@ if [ ! -f "$CONFIG_FILE" ]; then
 fi
 
 # Cargar variables del archivo .conf
-#Shellcheck source/dev/null
+#shellcheck source=/dev/null
 source "$CONFIG_FILE"
 
 # 2.  Validar que la ruta de destino exista
@@ -39,7 +39,7 @@ cd "$DIR_DESTINO"
 SHAS_ENCONTRADOS=0
 for HASH_FILE in backup_atlas_*.sha256; do
 	[ -e "$HASH_FILE" ] || continue
-	SHAS_ECONTRADOS=1
+	SHAS_ENCONTRADOS=1
 	echo -n "Verificando '$HASH_FILE':"
 	if sha256sum -c "$HASH_FILE" --status 2>/dev/null ; then
 		echo "OK"

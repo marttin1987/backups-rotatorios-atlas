@@ -19,12 +19,12 @@ if [ ! -f "$CONFIG_FILE" ]; then
 fi
 
 # Cargar variables del archivo .conf
-# shellcheck source =/dev/null
+# shellcheck source=/dev/null
 source "$CONFIG_FILE"
 
-# 2. Validar que las variables esenciales existan
-if [ -z "${DIR_ORIGEN:-}" ] || [ -z "${DIR_DESTINO:-}" ] || [ -z "${LOG_FILE:-}" ]; then	
-	echo "ERROR: Variables incompletas en $CONFIG_FILE." >&2
+# 2. Validar tempranamente que las 5 variables existan antes de operar
+if [ -z "${DIR_ORIGEN:-}" ] || [ -z "${DIR_DESTINO:-}" ] || [ -z "${LOG_FILE:-}" ] || [ -z "${UMBRAL_DISCO_MAX:-}" ]; then	
+	echo "ERROR: Variables DE configuracion incompletas o no definidas en $CONFIG_FILE." >&2
 	exit 2
 fi
 
