@@ -24,7 +24,7 @@ source "$CONFIG_FILE"
 
 # 2. Validar tempranamente que las 5 variables existan antes de operar
 if [ -z "${DIR_ORIGEN:-}" ] || [ -z "${DIR_DESTINO:-}" ] || [ -z "${LOG_FILE:-}" ] || [ -z "${DIAS_RETENCION:-}" ] || [ -z "${UMBRAL_DISCO_MAX:-}" ]; then	
-	echo "ERROR: Variables DE configuracion incompletas o no definidas en $CONFIG_FILE." >&2
+	echo "ERROR: Variables de configuracion incompletas o no definidas en $CONFIG_FILE." >&2
 	exit 2
 fi
 
