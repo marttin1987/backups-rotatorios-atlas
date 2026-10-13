@@ -6,7 +6,7 @@ Sistema de almacenamiento, compresión, verificación de integridad e higiene de
 - **Compresión Atómica**: Generación de paquetes `.tar.gz` previa prueba en archivo `.tmp` para evitar dejar respaldos corruptos en el sistema.
 - **Validación de Integridad Portátil**: Firma criptográfica SHA-256 con rutas relativas para preservar la privacidad de usuarios locales.
 - **Auditoría de Firma**: Script `src/verificar.sh` para comprobar la validez de los backups en cualquier momento.
-- **Higiene Específica de Disco**: Purga de archivos antiguos filtrada únicamente por el prefijo `backup_atlas_*` para no borrar datos externos del usuario.
+- **Higiene Específica de Disco**: Purga de archivos antiguos y sus firmas SHA-256 asociadas (`backup_atlas_*.tar.gz` y `backup_atlas_*.tar.gz.sha256`) sin afectar archivos externos.
 - **Detección Temprana de Parámetros**: Validación completa de las 5 variables en `config/backup.conf` y control de umbral crítico de almacenamiento.
 
 ## 🛠️ Requisitos e Instalación
@@ -15,3 +15,6 @@ Sistema de almacenamiento, compresión, verificación de integridad e higiene de
 ```bash
 git clone git@github.com:marttin1987/backups-rotatorios-atlas.git
 cd backups-rotatorios-atlas
+
+
+
