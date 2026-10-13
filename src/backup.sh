@@ -23,7 +23,7 @@ fi
 source "$CONFIG_FILE"
 
 # 2. Validar tempranamente que las 5 variables existan antes de operar
-if [ -z "${DIR_ORIGEN:-}" ] || [ -z "${DIR_DESTINO:-}" ] || [ -z "${LOG_FILE:-}" ] || [ -z "${UMBRAL_DISCO_MAX:-}" ]; then	
+if [ -z "${DIR_ORIGEN:-}" ] || [ -z "${DIR_DESTINO:-}" ] || [ -z "${LOG_FILE:-}" ] || [ -z "${DIAS_RETENCION:-}" ] || [ -z "${UMBRAL_DISCO_MAX:-}" ]; then	
 	echo "ERROR: Variables DE configuracion incompletas o no definidas en $CONFIG_FILE." >&2
 	exit 2
 fi
@@ -75,7 +75,7 @@ echo "HASH: $HASH_GENERADO" | tee -a "$LOG_FILE"
 
 # 7. Purga/Rotacion Especifica (Elimina tanto .tar.gz como su firma .tar.gz.sha256 asociada)
 echo "[3] Aplicando politica de rotacion ($DIAS_RETENCION dias)..." | tee -a "$LOG_FILE"
-ELIMINADOS=$(find "$DIR_DESTINO" -type f \( -name "backup_atlas_*.tar.gz" -o -name "backup_atlas_*.tar.gz.256" \) -mtime "+$DIAS_RETENCION" -print -delete | wc -l)
+ELIMINADOS=$(find "$DIR_DESTINO" -type f \( -name "backup_atlas_*.tar.gz" -o -name "backup_atlas_*.tar.gz.sha256" \) -mtime "+$DIAS_RETENCION" -print -delete | wc -l)
 
 if [ "$ELIMINADOS" -gt 0 ]; then
 	echo "Se purgaron $ELIMINADOS archivo(s) de respaldo antiguos de ATLAS." | tee -a "$LOG_FILE"
