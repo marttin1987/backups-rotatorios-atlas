@@ -11,7 +11,7 @@
 set -euo pipefail
 # 1. Determinar una ruta dinamica del script y cargar configuracion
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-CONFIG_FILE="$SCRIPT_DIR/config/backup.conf"
+CONFIG_FILE="${1:-$SCRIPT_DIR/config/backup.conf}"
 
 if [ ! -f "$CONFIG_FILE" ]; then
 	echo "ERROR: Archivo de configuracion '$CONFIG_FILE' no encontrado." >&2
